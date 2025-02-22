@@ -2,28 +2,29 @@ using UnityEngine;
 
 public class WeaponController : MonoBehaviour
 {
-    [SerializeField] private GameObject prefab;
+    [SerializeField] public GameObject prefab;
     [SerializeField] public float damage;
     [SerializeField] public float speed;
     [SerializeField] public float CD;
-    public float currentCD;
+    private float currentCD;
     [SerializeField] public int pierce;
-
+    protected PlayerMovement pm;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    protected virtual void Start()
     {
+        pm = FindAnyObjectByType<PlayerMovement>();
         currentCD = CD;
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         currentCD -= Time.deltaTime;
         if (currentCD < 0) {
             Attack();
         }
     }
-    void Attack()
+    protected virtual void Attack()
     {
         currentCD = CD;
     }
