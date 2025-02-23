@@ -2,8 +2,27 @@ using UnityEngine;
 
 public class ProjectileWeaponBehaviour : MonoBehaviour
 {
+    public WeaponScriptableObject weaponInformation;
     protected Vector3 direction;
     public float destroyAfterSecond;
+
+
+
+    //stats
+    protected float currentDamage;
+    protected float currentSpeed;
+    protected float currentCD;
+    protected int currentPierce;
+
+    private void Awake()
+    {
+        currentCD = weaponInformation.CD;
+        currentDamage = weaponInformation.Damage;
+        currentSpeed = weaponInformation.Speed;
+        currentPierce = weaponInformation.Pierce;
+    }
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected virtual void Start()
     {
@@ -60,5 +79,25 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
 
         transform.localScale = scale;
         transform.rotation = Quaternion.Euler(rotation);
+    }
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy"))
+        {
+            Stats enemy = collision.GetComponent<Stats>();
+            enemy.TakeDamage(currentDamage);
+            ApplyPierce();
+            Debug.Log($"Enemy take {currentDamage} Damage");
+        }
+    }
+
+    void ApplyPierce()
+    {
+        currentPierce--;
+        if(currentPierce <= 0)
+        {
+            Destroy(gameObject);
+        }
+
     }
 }

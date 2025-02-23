@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1364165823576568428}
   - component: {fileID: 7542604791356009149}
-  - component: {fileID: -1023729421392189584}
+  - component: {fileID: 5909161631993482014}
   m_Layer: 0
   m_Name: terrain_68
   m_TagString: Untagged
@@ -88,8 +88,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &-1023729421392189584
-BoxCollider2D:
+--- !u!60 &5909161631993482014
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -132,5 +132,25 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1.03125}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.118461624, y: 0.5111328}
+      - {x: -0.10553847, y: 0.54881763}
+      - {x: -0.3558572, y: 0.51200694}
+      - {x: -0.423233, y: 0.38528097}
+      - {x: -0.4379314, y: 0.25941816}
+      - {x: -0.43666464, y: 0.10935546}
+      - {x: -0.5432625, y: -0.10879243}
+      - {x: -0.5232876, y: -0.33848953}
+      - {x: -0.45448303, y: -0.39334103}
+      - {x: -0.32370752, y: -0.44734952}
+      - {x: -0.13301493, y: -0.5151893}
+      - {x: 0.45655197, y: -0.5073492}
+      - {x: 0.48758593, y: -0.3320671}
+      - {x: 0.5245847, y: -0.28675318}
+      - {x: 0.5283386, y: -0.20166439}
+      - {x: 0.5255032, y: 0.075601816}
+      - {x: 0.46031767, y: 0.094587654}
+      - {x: 0.45034507, y: 0.40989268}
+      - {x: 0.34853482, y: 0.41010836}
+  m_UseDelaunayMesh: 0

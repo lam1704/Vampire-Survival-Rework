@@ -11,7 +11,7 @@ public class LeavesController : WeaponController
     protected override void Attack()
     {
         base.Attack();
-        GameObject spawnLeaf = Instantiate(prefab);
+        GameObject spawnLeaf = Instantiate(weaponInformation.Prefab);
         spawnLeaf.transform.position = transform.position;
         spawnLeaf.GetComponent<LeafBehaviour>().DirectionChecker(pm.lastMovedDir);
     }

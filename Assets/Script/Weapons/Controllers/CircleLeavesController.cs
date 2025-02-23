@@ -12,7 +12,7 @@ public class CircleLeavesController : WeaponController
     protected override void Attack()
     {
         base.Attack();
-        GameObject spawnedBranch = Instantiate(prefab);
+        GameObject spawnedBranch = Instantiate(weaponInformation.Prefab);
         spawnedBranch.transform.position = transform.position;
         spawnedBranch.transform.parent = transform;
     }
