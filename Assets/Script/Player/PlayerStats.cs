@@ -45,6 +45,7 @@ public class PlayerStats : MonoBehaviour
     public void LevelUp()
     {
         IncreaseExp(expRequired);
+        Debug.Log("Leveling up");
     }
     private void Awake()
     {

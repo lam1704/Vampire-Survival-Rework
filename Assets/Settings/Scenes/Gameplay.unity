@@ -260,6 +260,7 @@ GameObject:
   - component: {fileID: 453609754}
   - component: {fileID: 453609755}
   - component: {fileID: 453609756}
+  - component: {fileID: 453609757}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -478,6 +479,18 @@ MonoBehaviour:
   exp: 0
   level: 1
   expRequired: 0
+--- !u!114 &453609757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453609748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3040dc178be9ef44ac672d51457d1be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &460343267
 GameObject:
   m_ObjectHideFlags: 0
@@ -870,7 +883,7 @@ PrefabInstance:
     - target: {fileID: 5395454221874134774, guid: 538b942efaebce341b706c130fd0d44f, type: 3}
       propertyPath: pickUpScriptableObject
       value: 
-      objectReference: {fileID: 11400000, guid: 631898fa022afef48938c3388cf9aea4, type: 2}
+      objectReference: {fileID: 11400000, guid: 9faf6ba54130f0646b14f85969d676ba, type: 2}
     - target: {fileID: 7097229447996339900, guid: 538b942efaebce341b706c130fd0d44f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.1
