@@ -13,7 +13,8 @@ public class CircleLeavesBehaviour : MeleeWeaponBehaviour
     }
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Enemy") && !markedEnemies.Contains(collision.gameObject){
+        if(collision.CompareTag("Enemy") && !markedEnemies.Contains(collision.gameObject))
+         {
             Stats enemy = collision.GetComponent<Stats>();
             enemy.TakeDamage(currentDamage);
             markedEnemies.Add(collision.gameObject);

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbb8ae7055228074fbc8704dc84e43ed, type: 3}
+  m_Name: Elite
+  m_EditorClassIdentifier: 
+  drops:
+  - name: Blue Exp
+    itemPrefab: {fileID: 6248023212015675771, guid: d3899dbb26d05774cb5ebe433dc194b1, type: 3}
+    dropChance: 100
+  - name: Green Exp
+    itemPrefab: {fileID: 578857487525059363, guid: ec7ca3d3fbc69544482d67e1e264bde0, type: 3}
+    dropChance: 100
+  - name: Yellow Exp
+    itemPrefab: {fileID: 5361271883856580674, guid: 9c3b8cbfadffdc64dab33caa77cfeaf2, type: 3}
+    dropChance: 60
+  - name: Purple Exp
+    itemPrefab: {fileID: 6460491188938715375, guid: 46666b16a52a4b34bb28d028e8cdd1d7, type: 3}
+    dropChance: 50
+  - name: Red Exp
+    itemPrefab: {fileID: 3729570694410660736, guid: fbd5ed5849c3f3141b55260d55e78dd1, type: 3}
+    dropChance: 30

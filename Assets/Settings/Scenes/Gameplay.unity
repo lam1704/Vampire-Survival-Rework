@@ -259,6 +259,7 @@ GameObject:
   - component: {fileID: 453609753}
   - component: {fileID: 453609754}
   - component: {fileID: 453609755}
+  - component: {fileID: 453609756}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -423,7 +424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf17a595428709b4281c84c999c76a24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  playerScript: {fileID: 11400000, guid: c5e3e1bd35026c94cbaa20c18a00a270, type: 2}
   moveDir: {x: 0, y: 0}
   lastMovedDir: {x: 0, y: 0}
   lastHorizontalDir: 0
@@ -461,6 +462,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e506836b047ce64b81b2d0b22d4e0b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &453609756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453609748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76f9df962fffba84cbcf0cb1dcae9f21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerScript: {fileID: 11400000, guid: c5e3e1bd35026c94cbaa20c18a00a270, type: 2}
+  exp: 0
+  level: 1
+  expRequired: 0
 --- !u!1 &460343267
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,6 +867,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5395454221874134774, guid: 538b942efaebce341b706c130fd0d44f, type: 3}
+      propertyPath: pickUpScriptableObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 631898fa022afef48938c3388cf9aea4, type: 2}
     - target: {fileID: 7097229447996339900, guid: 538b942efaebce341b706c130fd0d44f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.1
