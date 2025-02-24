@@ -2,6 +2,7 @@ using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using static PickUpScriptableObject;
 
 public class DropRateManager : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class DropRateManager : MonoBehaviour
         {
             if (d.DropChance < 0)
             {
+                Instantiate(d.ItemPrefab, transform.position, Quaternion.identity);
                 checkBossDrop = true;
             }
             else

@@ -15,4 +15,19 @@ MonoBehaviour:
   drops:
   - name: Boss_Exp
     itemPrefab: {fileID: 918942940523144416, guid: 4899488b6c3612945af3c12a817f6add, type: 3}
+    dropChance: -1
+  - name: Blue_Exp
+    itemPrefab: {fileID: 6248023212015675771, guid: d3899dbb26d05774cb5ebe433dc194b1, type: 3}
+    dropChance: 100
+  - name: Green_Exp
+    itemPrefab: {fileID: 578857487525059363, guid: ec7ca3d3fbc69544482d67e1e264bde0, type: 3}
+    dropChance: 100
+  - name: Yellow_Exp
+    itemPrefab: {fileID: 5361271883856580674, guid: 9c3b8cbfadffdc64dab33caa77cfeaf2, type: 3}
+    dropChance: 100
+  - name: Purple_Exp
+    itemPrefab: {fileID: 6460491188938715375, guid: 46666b16a52a4b34bb28d028e8cdd1d7, type: 3}
+    dropChance: 100
+  - name: Red_Exp
+    itemPrefab: {fileID: 3729570694410660736, guid: fbd5ed5849c3f3141b55260d55e78dd1, type: 3}
     dropChance: 100

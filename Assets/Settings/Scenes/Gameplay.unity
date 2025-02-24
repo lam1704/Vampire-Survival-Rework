@@ -479,6 +479,7 @@ MonoBehaviour:
   exp: 0
   level: 1
   expRequired: 0
+  invincibilityDuration: 0.5
 --- !u!114 &453609757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -507,7 +508,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &460343268
 Transform:
   m_ObjectHideFlags: 0
@@ -838,7 +839,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1520521628
 Transform:
   m_ObjectHideFlags: 0
@@ -883,14 +884,14 @@ PrefabInstance:
     - target: {fileID: 5395454221874134774, guid: 538b942efaebce341b706c130fd0d44f, type: 3}
       propertyPath: pickUpScriptableObject
       value: 
-      objectReference: {fileID: 11400000, guid: 9faf6ba54130f0646b14f85969d676ba, type: 2}
+      objectReference: {fileID: 11400000, guid: 5a3dd26b525c9ab4594175d0e6d49c17, type: 2}
     - target: {fileID: 7097229447996339900, guid: 538b942efaebce341b706c130fd0d44f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.1
+      value: 2.121
       objectReference: {fileID: 0}
     - target: {fileID: 7097229447996339900, guid: 538b942efaebce341b706c130fd0d44f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.28
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 7097229447996339900, guid: 538b942efaebce341b706c130fd0d44f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -923,6 +924,22 @@ PrefabInstance:
     - target: {fileID: 7097229447996339900, guid: 538b942efaebce341b706c130fd0d44f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7113423791932116753, guid: 538b942efaebce341b706c130fd0d44f, type: 3}
+      propertyPath: m_Size.x
+      value: 1.7034383
+      objectReference: {fileID: 0}
+    - target: {fileID: 7113423791932116753, guid: 538b942efaebce341b706c130fd0d44f, type: 3}
+      propertyPath: m_Size.y
+      value: 0.8353661
+      objectReference: {fileID: 0}
+    - target: {fileID: 7113423791932116753, guid: 538b942efaebce341b706c130fd0d44f, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.10998452
+      objectReference: {fileID: 0}
+    - target: {fileID: 7113423791932116753, guid: 538b942efaebce341b706c130fd0d44f, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.024441212
       objectReference: {fileID: 0}
     - target: {fileID: 7736350370614900458, guid: 538b942efaebce341b706c130fd0d44f, type: 3}
       propertyPath: m_Name

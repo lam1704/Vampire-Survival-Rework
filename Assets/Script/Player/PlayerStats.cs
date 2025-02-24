@@ -40,6 +40,10 @@ public class PlayerStats : MonoBehaviour
             level++;
             exp -= expRequired;
             expRequired = CalculateExpRequired(level);
+            if (exp >= expRequired)
+            {
+                LevelUpChecker();
+            }
         }
     }
     public int CalculateExpRequired(int level)
