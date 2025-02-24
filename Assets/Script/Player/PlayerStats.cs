@@ -9,7 +9,7 @@ public class PlayerStats : MonoBehaviour
     float currentHealth;
     float currentRegen;
     float currentMoveSpeed;
-    float currentStrength;
+    float currentDamange;
     float currentProjectileSpeed;
 
 
@@ -22,6 +22,12 @@ public class PlayerStats : MonoBehaviour
     public int expRequired;
 
 
+
+    //IFrame
+    [SerializeField] private float invincibilityDuration = 0.5f;
+    float invincibilityTimer;
+    bool isInvincible = false;
+
     public void IncreaseExp(int amount)
     {
         exp += amount;
@@ -29,7 +35,7 @@ public class PlayerStats : MonoBehaviour
     }
     public void LevelUpChecker()
     {
-        if (exp >= expRequired) 
+        if (exp >= expRequired)
         {
             level++;
             exp -= expRequired;
@@ -52,9 +58,29 @@ public class PlayerStats : MonoBehaviour
         currentHealth = playerScript.MaxHealth;
         currentRegen = playerScript.Regeneration;
         currentMoveSpeed = playerScript.MoveSpeed;
-        currentStrength = playerScript.Strength;
+        currentDamange = playerScript.Strength;
         currentProjectileSpeed = playerScript.ProjectileSpeed;
     }
+
+
+    public void TakeDamage(float damage)
+    {
+        if (!isInvincible)
+        {
+            currentHealth -= damage;
+            invincibilityTimer = invincibilityDuration;
+            isInvincible = true;
+            if (currentHealth <= 0) Kill();
+        }
+    }
+
+
+    private void Kill()
+    {
+        //Destroy(gameObject);
+    }
+
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -65,6 +91,13 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (invincibilityTimer > 0)
+        {
+            invincibilityTimer -= Time.deltaTime;
+        }
+        else if (isInvincible)
+        {
+            isInvincible = false;
+        }
     }
 }
